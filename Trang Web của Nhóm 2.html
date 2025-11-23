@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHUYÊN ĐỀ TIN HỌC: Visual Studio Code & Github</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #007bff;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #007bff; /* Tăng độ dày cho tiêu đề chính */
+            padding-bottom: 10px;
+            color: #333;
+        }
+        h2 {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-left: 5px solid #007bff; /* Thêm đường viền nổi bật */
+            border-radius: 4px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        /* Style mới cho mã lệnh */
+        code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+            color: #c92c2c; /* Màu đỏ nổi bật cho lệnh */
+            font-weight: bold;
+        }
+        /* Style cho khối lệnh */
+        .command {
+            background-color: #282c34; /* Nền tối như terminal */
+            color: #61afef; /* Màu xanh/trắng cho chữ */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .command code {
+            background-color: transparent;
+            color: #c678dd; /* Màu tím nổi bật hơn trong terminal */
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CHUYÊN ĐỀ TIN HỌC</h1>
+    <h2>Làm quen với Visual Studio Code & Github</h2>
+
+    <hr>
+
+    <h2>A. TỔNG QUAN</h2>
+    <ul>
+        <li><strong>VS Code (Visual Studio Code):</strong> là trình soạn thảo mã nguồn miễn phí do Microsoft phát triển [cite: 4], hỗ trợ rất nhiều ngôn ngữ lập trình như C++, Python, Java, JavaScript… [cite: 4]; sở hữu hệ thống extension phong phú[cite: 5].</li>
+        <li><strong>Github:</strong> là nền tảng lưu trữ và chia sẻ mã nguồn trực tuyến, dựa trên Git[cite: 6]. Nó cho phép quản lý phiên bản, làm việc nhóm, và tham gia vào các dự án mã nguồn mở[cite: 7].</li>
+        <li><strong>Git:</strong> Git là hệ thống quản lý phiên bản (Version Control System) giúp theo dõi lịch sử thay đổi mã nguồn, tạo nhánh, hợp nhất và làm việc nhóm hiệu quả [cite: 8], do Linus Torvalds tạo ra[cite: 8].</li>
+        <li><strong>GitHub Desktop:</strong> GitHub Desktop là ứng dụng giao diện (GUI) giúp bạn sử dụng Git và GitHub dễ dàng hơn mà không cần dùng lệnh[cite: 9].</li>
+    </ul>
+
+    <hr>
+
+    <h2>B. CÀI ĐẶT & THIẾT LẬP</h2>
+
+    <h3>I. CÀI ĐẶT</h3>
+
+    <h4>1. VS Code</h4>
+    <ol>
+        <li>Truy cập trang chính thức: <a href="https://code.visualstudio.com">https://code.visualstudio.com</a>[cite: 13].</li>
+        <li>Chọn nút **Download** phù hợp với hệ điều hành (Windows, macOS, Linux)[cite: 14].</li>
+        <li>Mở file cài đặt → nhấn **Next** liên tục → chọn **Install**[cite: 15].</li>
+        <li>Sau khi cài xong, mở VSCode để kiểm tra[cite: 16].</li>
+        <li>(Khuyến nghị) Cài thêm extension[cite: 17]:
+            <ul>
+                <li>**GitLens:** Xem lịch sử commit, tác giả từng dòng[cite: 18].</li>
+                <li>**Prettier:** Định dạng mã nguồn tự động[cite: 19].</li>
+                <li>**GitHub Pull Requests & Issues:** Quản lý PR trực tiếp trong VS Code[cite: 20].</li>
+            </ul>
+        </li>
+    </ol>
+    <p class="note"><strong>Lưu ý:</strong> Chỉnh cấu hình cơ bản (Theme, font, Tiếng Việt,.. nếu cần)[cite: 21].</p>
+
+    <h4>2. Git</h4>
+    <ol>
+        <li>Vào trang chính thức: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>[cite: 23].</li>
+        <li>Chọn phiên bản phù hợp với hệ điều hành (Windows/macOS/Linux)[cite: 24].</li>
+        <li>Mở file cài đặt → nhấn **Next** liên tục → **Install** → **Finish**[cite: 25].</li>
+        <li>Kiểm tra bằng cách mở Terminal/Command Prompt và gõ: 
+            <div class="command"><code>git --version</code></div> [cite: 26]
+        </li>
+        <li>Nếu hiện số phiên bản là cài thành công[cite: 27].</li>
+        <li>Cấu hình thông tin lần đầu[cite: 28]:
+            <div class="command"><code>git config --global user.name "Tên của bạn"</code></div> [cite: 29]
+            <div class="command"><code>git config --global user.email "Email của bạn"</code></div> [cite: 30]
+        </li>
+    </ol>
+    <p class="note"><strong>Lưu ý:</strong> Các cấu hình thông tin sẽ gắn liền với các commit[cite: 31].</p>
+
+    <h4>3. GitHub Desktop</h4>
+    <ol>
+        <li>Truy cập <a href="https://desktop.github.com">https://desktop.github.com</a>[cite: 33].</li>
+        <li>Tải về và cài đặt như phần mềm bình thường[cite: 34].</li>
+        <li>Đăng nhập bằng tài khoản GitHub[cite: 35].</li>
+    </ol>
+    <p class="note"><strong>Lưu ý:</strong>
+        <ul>
+            <li>Giao diện chính có các nút: **Clone a repository**, **Create a new repository**, **Add an existing repository**[cite: 37].</li>
+            <li>Có thể mở dự án bằng VSCode trực tiếp từ GitHub Desktop[cite: 38].</li>
+        </ul>
+    </p>
+
+    <h3>II. THIẾT LẬP</h3>
+
+    <h4>1. Tạo tài khoản GitHub</h4>
+    <ol>
+        <li>Vào <a href="https://github.com">https://github.com</a>[cite: 41].</li>
+        <li>Nhấn **Sign up** → nhập email, mật khẩu, username[cite: 42].</li>
+        <li>Xác nhận email để hoàn tất[cite: 43].</li>
+    </ol>
+    <p class="note"><strong>Lưu ý:</strong>
+        <ul>
+            <li>Sau khi đăng nhập, bạn có thể tạo repo mới bằng nút **New repository** (Tạo kho chứa mã nguồn mới)[cite: 45].</li>
+            <li>Chỉnh **Public** & **Private**[cite: 46]:
+                <ul>
+                    <li>**Public:** Ai cũng xem được[cite: 47].</li>
+                    <li>**Private:** Chỉ bạn (hoặc nhóm được cấp quyền) xem được[cite: 48].</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <h4>2. Kết nối VS Code với GitHub</h4>
+    <ol>
+        <li>Mở VSCode → nhấn **Ctrl + Shift + P**[cite: 50].</li>
+        <li>Gõ: **GitHub: Sign in** → chọn đăng nhập bằng trình duyệt[cite: 51].</li>
+        <li>Đăng nhập tài khoản GitHub → cấp quyền truy cập[cite: 52].</li>
+        <li>VSCode sẽ lưu token xác thực → có thể push/pull trực tiếp[cite: 53].</li>
+        <li>Kiểm tra tab **Source Control** đã hoạt động[cite: 54].</li>
+    </ol>
+    <p class="note"><strong>Lưu ý:</strong> Tab **Source Control** là nơi hiển thị mọi thay đổi[cite: 55].</p>
+
+    <h4>3. Đăng nhập tài khoản GitHub trên GitHub desktop</h4>
+    <ol>
+        <li>Mở GitHub Desktop[cite: 57].</li>
+        <li>Nhấn **File** → **Options** (hoặc biểu tượng bánh răng)[cite: 58].</li>
+        <li>Chọn **Sign in to GitHub.com**[cite: 59].</li>
+        <li>Đăng nhập tài khoản → xác nhận[cite: 60].</li>
+        <li>Sau khi đăng nhập, có thể clone, tạo repo, commit, push dễ dàng[cite: 61].</li>
+    </ol>
+
+    <hr>
+
+    <h2>C. LÀM VIỆC CÙNG GITHUB</h2>
+
+    <h3>I. QUA VS CODE & GITHUB DESKTOP</h3>
+
+    <h4>1. Lấy dự án từ GitHub về để chỉnh sửa</h4>
+    
+    <h5>a. Trực tiếp bằng VS Code</h5>
+    <ol>
+        <li>Vào GitHub → chọn repo cần lấy[cite: 66].</li>
+        <li>Nhấn nút **Code** → copy link **HTTPS**[cite: 67].</li>
+        <li>Mở VSCode → Terminal → gõ: 
+            <div class="command"><code>git clone &lt;link_repo&gt;</code></div> 
+        </li>
+        <li>Mở thư mục vừa clone → chỉnh sửa, commit, push[cite: 69].</li>
+    </ol>
+    
+    <h5>b. Thông qua GitHub Destop</h5>
+    <ol>
+        <li>Mở GitHub Desktop → chọn **Clone a repository** → chọn **URL**[cite: 71].</li>
+        <li>Dán link repo hoặc chọn repo từ danh sách[cite: 72].</li>
+        <li>Nhấn **Clone** → mở bằng VSCode để chỉnh sửa[cite: 73].</li>
+    </ol>
+
+    <h4>2. Đưa dự án của bản thân lên GitHub</h4>
+
+    <h5>a. Trực tiếp bằng VS Code</h5>
+    <ol>
+        <li>Mở thư mục dự án bằng VSCode[cite: 76].</li>
+        <li>Mở tab **Source Control** → nhấn **Initialize Repository**[cite: 77].</li>
+        <li>Gõ nội dung commit → nhấn **Commit**[cite: 78].</li>
+        <li>Nhấn **Publish to GitHub** → đăng nhập tài khoản[cite: 79].</li>
+        <li>Chọn tạo repo mới hoặc repo có sẵn[cite: 80].</li>
+        <li>Sau đó: **Commit** → **Push** mỗi khi cập nhật[cite: 81].</li>
+    </ol>
+
+    <h5>b. Thông qua GitHub Desktop</h5>
+    <ol>
+        <li>Mở GitHub Desktop → chọn **Create a new repository**[cite: 83].</li>
+        <li>Chọn thư mục dự án → đặt tên repo[cite: 84].</li>
+        <li>Nhấn **Publish repository** để đưa lên GitHub[cite: 85].</li>
+        <li>Sau khi chỉnh sửa → **Commit** → **Push origin**[cite: 86].</li>
+        <li>Mở bằng VSCode để tiếp tục làm việc[cite: 87].</li>
+    </ol>
+
+    <h3>II. TRỰC TIẾP TRÊN GITHUB QUA GITHUB CODESPACE</h3>
+
+    <h4>1. GitHub CodeSpace là gì?</h4>
+    <ul>
+        <li>Là môi trường lập trình trực tuyến giống Visual Studio Code[cite: 90].</li>
+        <li>Chạy trực tiếp trên GitHub, không cần cài đặt phần mềm[cite: 91].</li>
+        <li>Tự động tải mã nguồn, cài thư viện, và lưu thay đổi[cite: 92].</li>
+        <li>Phù hợp để chỉnh sửa nhanh, làm việc nhóm, hoặc tham gia dự án mã nguồn mở[cite: 93].</li>
+    </ul>
+
+    <h4>2. Cách sử dụng GitHub CodeSpace</h4>
+    <ol>
+        <li>Vào trang GitHub → đăng nhập tài khoản[cite: 95].</li>
+        <li>Tìm địa chỉ repo bạn muốn chỉnh sửa (có thể là repo của người khác hoặc repo của bạn)[cite: 96].</li>
+        <li>Dán địa chỉ repo vào thanh tìm kiếm → mở repo[cite: 97].</li>
+        <li>Nhấn nút **Code** → chọn tab **Codespaces**[cite: 98].</li>
+        <li>Nhấn **Create with Codespaces** hoặc **New codespace**[cite: 99].</li>
+        <li>GitHub sẽ mở giao diện VSCode trực tiếp trong trình duyệt[cite: 100].</li>
+        <li>Bạn có thể chỉnh sửa, commit, push ngay trên web mà không cần tải về[cite: 101].</li>
+        <li>Nếu muốn đóng góp vào dự án người khác → tạo **Pull Request**[cite: 102].</li>
+    </ol>
+
+    <hr>
+
+    <h2>D. THAM GIA DỰ ÁN MÃ NGUỒN MỞ</h2>
+
+    <h3>I. MÃ NGUỒN MỞ LÀ GÌ?</h3>
+    <ul>
+        <li>Là các dự án phần mềm có mã nguồn công khai, ai cũng có thể xem, sử dụng, chỉnh sửa và đóng góp[cite: 105].</li>
+        <li>Giúp cộng đồng cùng phát triển phần mềm, học hỏi lẫn nhau[cite: 106].</li>
+        <li>Các giấy phép phổ biến: **MIT**, **GPL**, **Apache**[cite: 107].</li>
+    </ul>
+
+    <h3>II. CÁCH THAM GIA VÀO DỰ ÁN MÃ NGUỒN MỞ</h3>
+
+    <h4>1. Tìm dự án phù hợp</h4>
+    <ul>
+        <li>Truy cập <a href="https://github.com/explore">https://github.com/explore</a> hoặc <a href="https://opensource.guide">https://opensource.guide</a>[cite: 110].</li>
+        <li>Tìm dự án theo ngôn ngữ bạn biết (Python, JavaScript, C++, v.v.)[cite: 111].</li>
+        <li>Ưu tiên chọn dự án có nhãn **good first issue** hoặc **help wanted**[cite: 112].</li>
+    </ul>
+
+    <h4>2. Quy trình tham gia</h4>
+    <ol>
+        <li>**Fork** dự án: tạo bản sao repo về tài khoản của bạn[cite: 114].</li>
+        <li>**Clone** repo fork về máy để chỉnh sửa: 
+            <div class="command"><code>git clone &lt;link_repo&gt;</code></div> [cite: 115]
+        </li>
+        <li>Tạo nhánh mới để làm việc riêng: 
+            <div class="command"><code>git checkout -b ten-nhanh-moi</code></div> 
+        </li>
+        <li>Chỉnh sửa mã nguồn → **commit** → **push** lên repo fork[cite: 117].</li>
+        <li>Tạo **Pull Request** để gửi thay đổi cho repo gốc[cite: 118].</li>
+        <li>Chủ dự án sẽ **review** → nếu đồng ý sẽ **merge** vào dự án chính[cite: 119].</li>
+    </ol>
+
+    <h4>3. Lưu ý khi đóng góp</h4>
+    <ul>
+        <li>Bạn có thể thực hiện tương tự thông qua Github CodeSpace[cite: 121].</li>
+        <li>Đọc kỹ file **README.md** và **CONTRIBUTING.md** của dự án[cite: 122].</li>
+        <li>Viết **commit** rõ ràng, dễ hiểu[cite: 123].</li>
+        <li>Tôn trọng quy tắc cộng đồng, phản hồi lịch sự[cite: 124].</li>
+        <li>Có thể bắt đầu bằng việc sửa lỗi nhỏ, cải thiện tài liệu, hoặc thêm tính năng đơn giản[cite: 125].</li>
+    </ul>
+
+    <hr>
+
+    <h2>E. TỔNG KẾT</h2>
+    <ul>
+        <li>**VS Code:** Công cụ viết code mạnh mẽ và phổ biến[cite: 127].</li>
+        <li>**Git:** Công cụ quản lý phiên bản không thể thiếu[cite: 128].</li>
+        <li>**GitHub:** Nơi lưu trữ, chia sẻ mã nguồn và làm việc nhóm[cite: 129].</li>
+        <li>**GitHub Desktop:** Dễ dùng, trực quan cho người mới[cite: 130].</li>
+    </ul>
+    <p style="font-weight: bold; text-align: center; color: #dc3545;">→ Bộ công cụ giúp học sinh – sinh viên làm việc khoa học, chuyên nghiệp, hiệu quả hơn[cite: 131].</p>
+
+</div>
+
+</body>
+</html>
