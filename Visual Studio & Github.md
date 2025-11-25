@@ -18,7 +18,7 @@
 ### I. CÀI ĐẶT
 
 #### 1. VS Code
-1.  Truy cập trang chính thức: `https://code.visualstudio.com`
+1.  Truy cập trang chính thức: `https://code.visualstudio.com`.
 2.  Chọn nút **Download** phù hợp với hệ điều hành (Windows, macOS, Linux).
 3.  Mở file cài đặt → nhấn **Next** liên tục → chọn **Install**.
 4.  Sau khi cài xong, mở VSCode để kiểm tra.
@@ -30,10 +30,10 @@
 > **Lưu ý:** Chỉnh cấu hình cơ bản (Theme, font, Tiếng Việt,.. nếu cần).
 
 #### 2. Git
-1.  Vào trang chính thức: `https://git-scm.com/downloads`
+1.  Vào trang chính thức: `https://git-scm.com/downloads`.
 2.  Chọn phiên bản phù hợp với hệ điều hành (Windows/macOS/Linux).
 3.  Mở file cài đặt → nhấn **Next** liên tục → **Install** → **Finish**.
-4.  Kiểm tra bằng cách mở **Terminal/Command Prompt** và gõ: `git --version`
+4.  Kiểm tra bằng cách mở **Terminal/Command Prompt** và gõ: `git --version`.
 5.  Nếu hiện số phiên bản là cài thành công.
 6.  Cấu hình thông tin lần đầu:
     ```bash
@@ -199,35 +199,35 @@
 | **Khối trích dẫn** | `>` | `> Đây là trích dẫn` |
 | **Liên kết** | `[Văn bản liên kết](URL)` | `[Google](https://www.google.com)` |
 | **Hình ảnh** | `![Văn bản thay thế](URL hình ảnh)` | `![Ảnh ví dụ](url/anh.png)` |
-| **Code Inline** | `` `...` `` | `` `print("Hello")` `` |
-| **Khối code** | ``` `​`` (3 dấu) | ```python
+| **Code Inline** | Dùng 1 dấu `` ` `` ở đầu và cuối | `` `print("Hello")` `` |
+| **Khối code** | Dùng 3 dấu `` ` `` ở đầu và cuối | ```
+```python
 print("Hello")
-``` |
-
 ### III. Cách Chuyển Từ File Word (.docx) Thành File Markdown (.md)
 Có nhiều cách để chuyển từ file Word (`.docx`) sang file Markdown (`.md`):
 * **Sử dụng Công cụ Chuyển đổi Trực tuyến**: Bạn tải file Word lên và tải file Markdown về.
 * **Sử dụng `pandoc` (Nâng cao)**:
+    * Đây là một công cụ chuyển đổi tài liệu mạnh mẽ, thường được dùng qua Command Line (Dòng lệnh).
     * **Lệnh ví dụ**: `pandoc -s ten_file_word.docx -o ten_file_markdown.md`.
-* **Sử dụng các Tính năng Xuất/Lưu**: Trong các phần mềm soạn thảo, có thể có tùy chọn **Lưu dưới dạng (Save As)** hoặc **Xuất (Export)** sang định dạng `.md`.
+* **Sử dụng các Tính năng Xuất/Lưu**: Một số phần mềm soạn thảo văn bản hoặc các plugin chuyên biệt có thể có tùy chọn **Lưu dưới dạng (Save As)** hoặc **Xuất (Export)** sang định dạng `.md`.
 * **Sao chép và Dán**: Đối với văn bản đơn giản, bạn có thể sao chép và tự định dạng lại bằng tay trong trình soạn thảo Markdown.
 * **Đưa file cho một A.I. bất kì** và yêu cầu chuyển thành file Mardown, như Genimi, ChatGPT, Copilot,….
 
 ### IV. SỬ DỤNG FILE MARKDOWN TRONG VS CODE & GITHUB
 
 #### 1. Soạn thảo: Viết tài liệu trong VS Code
-* Bạn sử dụng VS Code để viết nội dung bằng cú pháp Markdown.
+* Bạn sử dụng VS Code để viết nội dung bằng cú pháp Markdown, thay vì dùng các nút định dạng phức tạp như trong Word.
 * Bạn làm gì: Mở một file mới và đặt tên là **`README.md`** (hoặc bất kỳ tên `.md` nào khác).
 * Điểm đặc biệt của VS Code:
     * **Tô sáng cú pháp (Syntax Highlighting)**: Tô màu các ký hiệu Markdown (như `#`, `**`, `*`) giúp bạn dễ nhận biết cú pháp hơn.
-    * **Xem trước (Preview) Trực tiếp**: Bạn có thể chia màn hình làm đôi:
+    * **Xem trước (Preview) Trực tiếp**: Đây là phần quan trọng nhất. Bạn có thể chia màn hình làm đôi:
         * **Bên trái**: Nơi bạn gõ cú pháp Markdown (`# Tiêu đề`).
         * **Bên phải**: Nơi bạn thấy kết quả hiển thị **như trên GitHub** (một dòng chữ to và đậm).
 
 > **Trực quan**: VS Code cho bạn thấy ngay lập tức tài liệu sẽ **trông như thế nào** trước khi bạn đưa nó lên mạng.
 
 #### 2. Đưa lên GitHub: Kết nối và Đồng bộ
-* Sau khi viết xong trong VS Code, bạn cần đưa file lên **Repository** trên GitHub.
+* Sau khi viết xong trong VS Code, bạn cần đưa file lên **Repository** (Kho lưu trữ) trên GitHub của mình.
 * Bạn sử dụng các công cụ **Quản lý phiên bản (Source Control)** (Git/GitHub) tích hợp sẵn trong VS Code.
 * Hành động: Bạn **Commit** (ghi nhận các thay đổi) và sau đó **Push** (đẩy) file `.md` này từ máy tính của bạn lên GitHub.
 
